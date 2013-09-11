@@ -1,0 +1,54 @@
+// Dev only: Open Sans 400, 400 Italic; Open Sans Condensed 300, 300 Italic
+@import url(http://fonts.googleapis.com/css?family=Open+Sans:400italic,400,600|Open+Sans+Condensed:300);
+
+// Color scheme: https://kuler.adobe.com/OMRS13-eventsopenmrsorg-color-theme-2896285/
+$background:    #240301;
+$dark:          #3d1e0b;
+$white:         #f7f5f0;
+$gold:          #a48723;
+$warm-white:    #fdf9cc;
+
+
+
+body {
+    background-color: $background;
+    
+    color: #f7f5f0;
+    font: 14px 'Open Sans Condensed', 'Helvetica', 'Arial', 'Liberation Sans', sans-serif;
+}
+
+header {
+    h1 {
+        text-indent: -9999px;
+        background: url(img/cropped-header11.png) no-repeat;
+        // background-size: 100%;
+        background-size: auto;
+        width: 100%;
+        height: 4em;
+    }
+}
+
+.entry {
+   padding: 1em 2.2em;
+   
+   form {
+       input {
+           padding: 0.3em 0.55em;
+           border-radius: 0.3em;
+           height: 1.2em;
+           
+           &[type="text"] {
+               
+           }
+           
+           &[type="submit"] {
+               background: $gold;
+               
+               
+               color: $white;
+               border: 1px solid $dark;
+           }
+       }
+      
+   }
+}
