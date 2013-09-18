@@ -7,14 +7,14 @@
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, user-scalable=false,
             initial-scale=1, maximum-scale=1;">
-        <title>Welcome to the Implementers Meeting, 2013</title>
+        <title>OMRS13: Connect to the Internet</title>
         
         <link rel="stylesheet" href="css/style.css">
         <script src="js/zepto.min.js" async="true"></script>
     </head>
     <body>
         <header>
-            <h1>OpenMRS Network Registration</h1>
+            <h1>OpenMRS Wireless Internet Registration</h1>
         </header>
         
         <div id="wrap">
@@ -33,14 +33,15 @@
             <unifi if="auth_hotspot">
                 <unifi if="voucher_entry">
                     <section id="entry" class="animated bounceIn">
-                        <p>To connect, <strong>enter the network key</strong> provided with
-                            your registration. You should only need to do this once.</p>
+                        <p>To connect to the Internet, <strong>enter the network key</strong> provided 
+                        to you as a participant. You should only need to do this once for this device.
+                        If you have trouble, contact the registration desk.</p>
                         <form>
                             <input type="hidden" name="by" value="voucher">
                             
                             <input type="text" name="voucher" placeholder="AAAA-BBBB-CCCC-DDDD">
                             <button type="submit">
-                                Connect <span id="status"></span>
+                                Connect to the Internet<span id="status"></span>
                             </button>
                         </form>
                         <unifi if="has_error">
