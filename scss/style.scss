@@ -1,0 +1,202 @@
+@import url(//fonts.googleapis.com/css?family=Open+Sans:400,300|Crimson+Text);
+
+@import url(animate.min.css);
+
+// Color scheme: https://kuler.adobe.com/OMRS13-eventsopenmrsorg-color-theme-2896285/
+$black:         #210000;
+$dark:          #3d1e0b;
+$white:         #f7f5f0;
+$gold:          #B38936;
+$warm-white:    #fdf9cc;
+
+// Media queries
+$mobile:        "(max-width: 609px)";
+$res2x:         "(-webkit-min-device-pixel-ratio: 2), (min-resolution: 2dppx)";
+$singlecolumn:  "(max-width: 880px)";
+
+@mixin clearfix {
+    &:before, &:after {
+        content:"";
+        display:table;
+    }
+   
+    &:after {
+        clear: both;
+    }
+}
+
+body {
+    background-color: $black;
+    padding: 0;
+    margin: 0;
+    
+    color: #f7f5f0;
+    font: 300 18px 'Open Sans', sans-serif;
+    
+    @media #{$mobile} {
+        font-size: 16px;
+    }
+}
+
+a, a:hover, a:visited {
+    color: $gold;
+}
+
+h2 {
+    font: 300 1.33em 'Crimson Text', serif;
+    
+    @media #{$mobile} {
+        font-size: 1.1em;
+    }
+}
+
+p {
+    &.error {color: red;}
+}
+
+strong {
+    font-weight: 400;
+}
+
+header {
+    padding: 0;
+    margin: 0;
+    position: relative;
+    
+    background: #b29424 url(../img/omrs13-header-crop.png) right no-repeat;
+    height: 71px;
+    width: 100%;
+
+    @media #{$res2x} {
+        background-image: url(../img/omrs13-header-crop@2x.png);
+        background-size: 380px 71px;
+    }
+    
+    h1 {
+        margin: 0 auto;
+        padding: 0;
+        text-indent: -9999px;
+        
+        height: 100%;
+        max-width: 880px;
+        
+        background: url(../img/omrs-logo-black.png) no-repeat;
+        background-position: 0 16px;
+        
+        @media #{$mobile} {
+             background-position: 0.6em 16px;
+        }
+        
+        @media #{$res2x} {
+             background-image: url(../img/omrs-logo-black@2x.png);
+             background-size: 156px 40px;
+        }
+    }
+}
+
+#wrap {
+    position: relative;
+    margin: 2em auto;
+    max-width: 48.8em;
+    
+    @include clearfix;
+    
+    @media #{$singlecolumn} {
+        max-width: 24.4em;
+    }
+    
+    @media #{$mobile} {
+        margin: 0 auto;
+    }
+}
+
+section {
+    padding: 1.8em 2.2em;
+    max-width: 20em;
+    float: left;
+    
+    @media #{$mobile} {
+        float: none;
+    }
+    
+    @include clearfix; 
+    
+    &#preface {
+        background: $black;
+        padding-top: 0em;
+        
+        @media #{$mobile} {
+             padding-top: 1.8em;
+        }
+    }
+    &#entry {
+        background: $white;
+        color: $black;
+        box-shadow: 0 1px 6px $black;
+        
+    }
+}
+
+#conference-logo {
+    max-width: 100%;
+}
+
+form {
+    input, button {
+        padding: 0.3em 0.55em;
+        margin: auto auto 0.6em;
+        border-radius: 0.3em;
+        background: $white;
+        color: $black;
+        border: 1px solid $gold;
+        
+        -webkit-box-sizing: border-box;
+        -moz-box-sizing: border-box;
+        box-sizing: border-box;
+        
+        &:focus, &:active {
+            border-color: $dark;
+        }
+        
+        &[type="text"] {
+            box-shadow: none;
+            width: 100%;
+            font-size: 1.45em;
+            display: block;
+            
+            outline: none;
+        }
+        
+        &[type="submit"] {
+            -webkit-appearance: none;
+            float: right;
+            border-radius: (1.88em/2);
+            
+            font-size: 1em;
+            cursor: pointer;
+            
+            &:active {
+             //   background: darken($white, 10%);
+            }
+        }
+        
+        #status:after {
+            content: "\2192";
+        }
+            
+        #status.loading:after {
+             content: "";
+             background: url(../img/loader.gif) no-repeat;
+             min-height: 16px;
+             min-width: 16px;
+             display: inline-block;
+             position: relative;
+             top: 2px;
+        }
+
+        @include clearfix;
+    }
+   
+   
+  
+}

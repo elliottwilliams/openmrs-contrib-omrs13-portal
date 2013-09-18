@@ -1,0 +1,135 @@
+@import url(//fonts.googleapis.com/css?family=Open+Sans:400,300|Crimson+Text);
+@import url(animate.min.css);
+body {
+  background-color: #210000;
+  padding: 0;
+  margin: 0;
+  color: #f7f5f0;
+  font: 300 18px 'Open Sans', sans-serif; }
+  @media (max-width: 609px) {
+    body {
+      font-size: 16px; } }
+
+a, a:hover, a:visited {
+  color: #b38936; }
+
+h2 {
+  font: 300 1.33em 'Crimson Text', serif; }
+  @media (max-width: 609px) {
+    h2 {
+      font-size: 1.1em; } }
+
+p.error {
+  color: red; }
+
+strong {
+  font-weight: 400; }
+
+header {
+  padding: 0;
+  margin: 0;
+  position: relative;
+  background: #b29424 url(../img/omrs13-header-crop.png) right no-repeat;
+  height: 71px;
+  width: 100%; }
+  @media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 2dppx) {
+    header {
+      background-image: url(../img/omrs13-header-crop@2x.png);
+      background-size: 380px 71px; } }
+  header h1 {
+    margin: 0 auto;
+    padding: 0;
+    text-indent: -9999px;
+    height: 100%;
+    max-width: 880px;
+    background: url(../img/omrs-logo-black.png) no-repeat;
+    background-position: 0 16px; }
+    @media (max-width: 609px) {
+      header h1 {
+        background-position: 0.6em 16px; } }
+    @media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 2dppx) {
+      header h1 {
+        background-image: url(../img/omrs-logo-black@2x.png);
+        background-size: 156px 40px; } }
+
+#wrap {
+  position: relative;
+  margin: 2em auto;
+  max-width: 48.8em; }
+  #wrap:before, #wrap:after {
+    content: "";
+    display: table; }
+  #wrap:after {
+    clear: both; }
+  @media (max-width: 880px) {
+    #wrap {
+      max-width: 24.4em; } }
+  @media (max-width: 609px) {
+    #wrap {
+      margin: 0 auto; } }
+
+section {
+  padding: 1.8em 2.2em;
+  max-width: 20em;
+  float: left; }
+  @media (max-width: 609px) {
+    section {
+      float: none; } }
+  section:before, section:after {
+    content: "";
+    display: table; }
+  section:after {
+    clear: both; }
+  section#preface {
+    background: #210000;
+    padding-top: 0em; }
+    @media (max-width: 609px) {
+      section#preface {
+        padding-top: 1.8em; } }
+  section#entry {
+    background: #f7f5f0;
+    color: #210000;
+    box-shadow: 0 1px 6px #210000; }
+
+#conference-logo {
+  max-width: 100%; }
+
+form input, form button {
+  padding: 0.3em 0.55em;
+  margin: auto auto 0.6em;
+  border-radius: 0.3em;
+  background: #f7f5f0;
+  color: #210000;
+  border: 1px solid #b38936;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box; }
+  form input:focus, form input:active, form button:focus, form button:active {
+    border-color: #3d1e0b; }
+  form input[type="text"], form button[type="text"] {
+    box-shadow: none;
+    width: 100%;
+    font-size: 1.45em;
+    display: block;
+    outline: none; }
+  form input[type="submit"], form button[type="submit"] {
+    -webkit-appearance: none;
+    float: right;
+    border-radius: 0.94em;
+    font-size: 1em;
+    cursor: pointer; }
+  form input #status:after, form button #status:after {
+    content: "\2192"; }
+  form input #status.loading:after, form button #status.loading:after {
+    content: "";
+    background: url(../img/loader.gif) no-repeat;
+    min-height: 16px;
+    min-width: 16px;
+    display: inline-block;
+    position: relative;
+    top: 2px; }
+  form input:before, form input:after, form button:before, form button:after {
+    content: "";
+    display: table; }
+  form input:after, form button:after {
+    clear: both; }

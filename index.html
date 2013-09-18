@@ -1,27 +1,77 @@
 <!doctype html>
 <html>
+    <!--
+        :) 
+    -->
     <head>
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, user-scalable=false;">
         <title>Welcome to the Implementers Meeting, 2013</title>
         
-        <link rel="stylesheet" href="style.css">
+        <link rel="stylesheet" href="css/style.css">
+        <script src="js/zepto.min.js" async="true"></script>
     </head>
     <body>
-        <header><h1>OpenMRS</h1></header>
-        <section class="entry">
+        <header>
+            <h1>OpenMRS Network Registration</h1>
+        </header>
+        
+        <div id="wrap">
+            <section id="preface">
             
-            <p>
-                Welcome!
-            </p>
-            <p>
-                To connect, enter the network key provided with your registration.
-                You should only need to do this once.
-            </p>
-            <form>
-                <input type="text" name="key" placeholder="AAAA-BBBB-CCCC-DDDD">
-                <input type="submit" label="Connect">
-            </form>
-        </section>
+                <img id="conference-logo" src="img/roots-and-branches1.svg"
+                    alt="Roots and Branches">
+                <h2>2013 OpenMRS Implementers Meeting: 8-11 October</h2>
+                <p>
+                    <a href="http://www.thenoble.co.ke/">The Noble Conference Centre</a><br>
+                    <a href="http://en.wikipedia.org/wiki/Eldoret">Eldoret, Kenya</a>
+                </p>
+    
+            </section>
+            
+            <unifi if="auth_hotspot">
+                <unifi if="voucher_entry">
+                    <section id="entry" class="animated bounceIn">
+                        <p>To connect, <strong>enter the network key</strong> provided with
+                            your registration. You should only need to do this once.</p>
+                        <form>
+                            <input type="hidden" name="by" value="voucher">
+                            
+                            <input type="text" name="voucher" placeholder="AAAA-BBBB-CCCC-DDDD">
+                            <button type="submit">
+                                Connect <span id="status"></span>
+                            </button>
+                        </form>
+                        <unifi if="has_error">
+                            <p class="error"><unifi var="error"></p>
+                        </unifi>
+                    </section>
+                </unifi>
+            </unifi>
+        </div>
+        
+        <script type="text/javascript">
+            $('#entry form').on('submit', function(e) {
+                e.preventDefault();
+                $('#status').addClass('loading');
+            })
+            /*function repositionForm() {
+                var form = $('#entry')
+                ,   offset = $(form).offset()
+                ,   vheight = $(document).height()
+                ,   fheight = $(form).height()
+                ,   scroll = $(window).scrollTop()
+                
+                var topVis = scroll
+                ,   botVis = scroll + vheight
+                
+                if (offset.top + offset.height > botVis) {
+                    $(form).css('position', 'float');
+                    return true
+                }
+                return false
+            }
+            $(window).on('resize', repositionForm)*/
+        </script>
     </body>
 </html>
