@@ -36,10 +36,10 @@
                         <p>To connect to the Internet, <strong>enter the network key</strong> provided 
                         to you as a participant. You should only need to do this once for this device.
                         If you have trouble, contact the registration desk.</p>
-                        <form>
+                       <form method="post" action="/guest/login">
                             <input type="hidden" name="by" value="voucher">
                             
-                            <input type="text" name="voucher" placeholder="AAAA-BBBB-CCCC-DDDD">
+                            <input type="text" name="voucher" placeholder="12345-67890">
                             <button type="submit">
                                 Connect to the Internet<span id="status"></span>
                             </button>
