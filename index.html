@@ -41,7 +41,7 @@
                             
                             <input type="text" name="voucher" placeholder="12345-67890">
                             <button type="submit">
-                                Connect to the Internet<span id="status"></span>
+                                Connect to the Internet <span id="status"></span>
                             </button>
                         </form>
                         <unifi if="has_error">
@@ -54,26 +54,8 @@
         
         <script type="text/javascript">
             $('#entry form').on('submit', function(e) {
-                e.preventDefault();
                 $('#status').addClass('loading');
             })
-            /*function repositionForm() {
-                var form = $('#entry')
-                ,   offset = $(form).offset()
-                ,   vheight = $(document).height()
-                ,   fheight = $(form).height()
-                ,   scroll = $(window).scrollTop()
-                
-                var topVis = scroll
-                ,   botVis = scroll + vheight
-                
-                if (offset.top + offset.height > botVis) {
-                    $(form).css('position', 'float');
-                    return true
-                }
-                return false
-            }
-            $(window).on('resize', repositionForm)*/
         </script>
     </body>
 </html>
