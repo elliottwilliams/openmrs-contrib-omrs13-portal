@@ -1,11 +1,10 @@
-@import url(//fonts.googleapis.com/css?family=Open+Sans:400,300|Crimson+Text);
 @import url(animate.min.css);
 body {
   background-color: #210000;
   padding: 0;
   margin: 0;
   color: #f7f5f0;
-  font: 300 18px 'Open Sans', sans-serif; }
+  font: 300 18px 'open_sanslight', sans-serif; }
   @media (max-width: 609px) {
     body {
       font-size: 16px; } }
@@ -14,7 +13,7 @@ a, a:hover, a:visited {
   color: #b38936; }
 
 h2 {
-  font: 300 1.33em 'Crimson Text', serif; }
+  font: 300 1.33em 'crimson_textroman', serif; }
   @media (max-width: 609px) {
     h2 {
       font-size: 1.1em; } }
@@ -23,7 +22,8 @@ p.error {
   color: red; }
 
 strong {
-  font-weight: 400; }
+  font-weight: 400;
+  font-family: 'open_sansregular', sans-serif; }
 
 header {
   padding: 0;
