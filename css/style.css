@@ -1,22 +1,4 @@
-/*@import url(//fonts.googleapis.com/css?family=Open+Sans:400,300|Crimson+Text);*/
-@font-face {
-  font-family: 'Crimson Text';
-  font-style: normal;
-  font-weight: 400;
-  src: local('Crimson Text'), local('CrimsonText-Roman'), url(http://themes.googleusercontent.com/static/fonts/crimsontext/v3/3IFMwfRa07i-auYR-B-zNaRDOzjiPcYnFooOUGCOsRk.woff) format('woff');
-}
-@font-face {
-  font-family: 'Open Sans';
-  font-style: normal;
-  font-weight: 300;
-  src: local('Open Sans Light'), local('OpenSans-Light'), url(http://themes.googleusercontent.com/static/fonts/opensans/v6/DXI1ORHCpsQm3Vp6mXoaTaRDOzjiPcYnFooOUGCOsRk.woff) format('woff');
-}
-@font-face {
-  font-family: 'Open Sans';
-  font-style: normal;
-  font-weight: 400;
-  src: local('Open Sans'), local('OpenSans'), url(http://themes.googleusercontent.com/static/fonts/opensans/v6/cJZKeOuBrn4kERxqtaUH3bO3LdcAZYWl9Si6vvxL-qU.woff) format('woff');
-}
+@import url(//fonts.googleapis.com/css?family=Open+Sans:400,300|Crimson+Text);
 @import url(animate.min.css);
 body {
   background-color: #210000;
