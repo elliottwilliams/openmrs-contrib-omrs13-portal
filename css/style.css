@@ -4,8 +4,8 @@ body {
   padding: 0;
   margin: 0;
   color: #f7f5f0;
-  font: 300 18px 'open_sanslight', sans-serif; }
-  @media (max-width: 609px) {
+  font: 300 18px "open_sanslight", sans-serif; }
+  @media (max-width: 880px) {
     body {
       font-size: 16px; } }
 
@@ -14,7 +14,7 @@ a, a:hover, a:visited {
 
 h2 {
   font: 300 1.33em 'crimson_textroman', serif; }
-  @media (max-width: 609px) {
+  @media (max-width: 880px) {
     h2 {
       font-size: 1.1em; } }
 
@@ -29,28 +29,31 @@ header {
   padding: 0;
   margin: 0;
   position: relative;
-  background: #b29424 url(../img/omrs13-header-crop.png) right no-repeat;
-  height: 71px;
+  background: #b29424 url(../img/omrs13-header.png) right bottom/auto 100% no-repeat;
+  height: 4.42em;
   width: 100%; }
   @media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 2dppx) {
     header {
-      background-image: url(../img/omrs13-header-crop@2x.png);
-      background-size: 380px 71px; } }
+      background-image: url(../img/omrs13-header-crop@2x.png); } }
+  @media (max-width: 880px) {
+    header {
+      background-image: url(../img/omrs13-header-crop.png); } }
+    @media (max-width: 880px) and (-webkit-min-device-pixel-ratio: 2), (max-width: 880px) and (min-resolution: 2dppx) {
+      header {
+        background-image: url(../img/omrs13-header@2x.png); } }
+  @media (max-width: 537px) {
+    header {
+      height: 10%; } }
   header h1 {
     margin: 0 auto;
     padding: 0;
     text-indent: -9999px;
+    position: relative;
     height: 100%;
-    max-width: 880px;
-    background: url(../img/omrs-logo-black.png) no-repeat;
-    background-position: 0 16px; }
-    @media (max-width: 609px) {
-      header h1 {
-        background-position: 0.6em 16px; } }
-    @media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 2dppx) {
-      header h1 {
-        background-image: url(../img/omrs-logo-black@2x.png);
-        background-size: 156px 40px; } }
+    max-width: 24.375em;
+    background: url(../img/OMRS13.svg) no-repeat;
+    background-position: 0 50%;
+    background-size: auto 95%; }
 
 #wrap {
   position: relative;
@@ -64,7 +67,7 @@ header {
   @media (max-width: 880px) {
     #wrap {
       max-width: 24.4em; } }
-  @media (max-width: 609px) {
+  @media (max-width: 880px) {
     #wrap {
       margin: 0 auto; } }
 
@@ -72,7 +75,7 @@ section {
   padding: 1.8em 2.2em;
   max-width: 20em;
   float: left; }
-  @media (max-width: 609px) {
+  @media (max-width: 880px) {
     section {
       float: none; } }
   section:before, section:after {
@@ -83,7 +86,7 @@ section {
   section#preface {
     background: #210000;
     padding-top: 0em; }
-    @media (max-width: 609px) {
+    @media (max-width: 880px) {
       section#preface {
         padding-top: 1.8em; } }
   section#entry {
@@ -106,10 +109,10 @@ form input, form button {
   box-sizing: border-box; }
   form input:focus, form input:active, form button:focus, form button:active {
     border-color: #3d1e0b; }
-  form input[type="text"], form button[type="text"] {
+  form input[type="tel"], form button[type="tel"] {
     box-shadow: none;
     width: 100%;
-    font-size: 1.45em;
+    font: 300 1.95em 'open_sanslight', sans-serif;
     display: block;
     outline: none; }
   form input[type="submit"], form button[type="submit"] {

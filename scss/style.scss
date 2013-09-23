@@ -8,9 +8,10 @@ $gold:          #B38936;
 $warm-white:    #fdf9cc;
 
 // Media queries
-$mobile:        "(max-width: 609px)";
-$res2x:         "(-webkit-min-device-pixel-ratio: 2), (min-resolution: 2dppx)";
-$singlecolumn:  "(max-width: 880px)";
+// $singlecolumn:     "(max-width: 609px)";
+$wrapheader:          "(max-width: 537px)";
+$res2x:               "(-webkit-min-device-pixel-ratio: 2), (min-resolution: 2dppx)";
+$singlecolumn:        "(max-width: 880px)";
 
 @mixin clearfix {
     &:before, &:after {
@@ -23,15 +24,21 @@ $singlecolumn:  "(max-width: 880px)";
     }
 }
 
+@function em($px, $base: $base-font-size) {
+    @return ($px / $base) * 1em;
+}
+
+$base-font-size: 18px;
 body {
     background-color: $black;
     padding: 0;
     margin: 0;
     
     color: #f7f5f0;
-    font: 300 18px 'open_sanslight', sans-serif;
     
-    @media #{$mobile} {
+    font: 300 $base-font-size 'open_sanslight', sans-serif;
+    
+    @media #{$singlecolumn} {
         font-size: 16px;
     }
 }
@@ -43,7 +50,7 @@ a, a:hover, a:visited {
 h2 {
     font: 300 1.33em 'crimson_textroman', serif;
     
-    @media #{$mobile} {
+    @media #{$singlecolumn} {
         font-size: 1.1em;
     }
 }
@@ -62,34 +69,38 @@ header {
     margin: 0;
     position: relative;
     
-    background: #b29424 url(../img/omrs13-header-crop.png) right no-repeat;
-    height: 71px;
+    background: #b29424 url(../img/omrs13-header.png)
+        right bottom / auto 100% no-repeat;
+    height: 4.42em;
     width: 100%;
-
+    
     @media #{$res2x} {
         background-image: url(../img/omrs13-header-crop@2x.png);
-        background-size: 380px 71px;
+    }
+    
+    @media #{$singlecolumn} {
+        background-image: url(../img/omrs13-header-crop.png);
+        @media #{$res2x} {
+            background-image: url(../img/omrs13-header@2x.png);
+        }
+    }
+    
+    @media #{$wrapheader} {
+        height: 10%;
     }
     
     h1 {
         margin: 0 auto;
         padding: 0;
         text-indent: -9999px;
+        position: relative;
         
         height: 100%;
-        max-width: 880px;
+        max-width: em(780, 32);
         
-        background: url(../img/omrs-logo-black.png) no-repeat;
-        background-position: 0 16px;
-        
-        @media #{$mobile} {
-             background-position: 0.6em 16px;
-        }
-        
-        @media #{$res2x} {
-             background-image: url(../img/omrs-logo-black@2x.png);
-             background-size: 156px 40px;
-        }
+        background: url(../img/OMRS13.svg) no-repeat;
+        background-position: 0 50%;
+        background-size: auto 95%;
     }
 }
 
@@ -104,7 +115,7 @@ header {
         max-width: 24.4em;
     }
     
-    @media #{$mobile} {
+    @media #{$singlecolumn} {
         margin: 0 auto;
     }
 }
@@ -114,7 +125,7 @@ section {
     max-width: 20em;
     float: left;
     
-    @media #{$mobile} {
+    @media #{$singlecolumn} {
         float: none;
     }
     
@@ -124,7 +135,7 @@ section {
         background: $black;
         padding-top: 0em;
         
-        @media #{$mobile} {
+        @media #{$singlecolumn} {
              padding-top: 1.8em;
         }
     }
@@ -157,10 +168,10 @@ form {
             border-color: $dark;
         }
         
-        &[type="text"] {
+        &[type="tel"] {
             box-shadow: none;
             width: 100%;
-            font-size: 1.45em;
+            font: 300 1.95em 'open_sanslight', sans-serif;
             display: block;
             
             outline: none;
