@@ -1,11 +1,24 @@
-@import url(animate.min.css);
+* {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box; }
+
 body {
   background-color: #210000;
   padding: 0;
   margin: 0;
+  overflow-x: hidden;
+  max-width: 48.8em;
+  margin-left: auto;
+  margin-right: auto;
   color: #f7f5f0;
   font: 300 18px "open_sanslight", sans-serif; }
-  @media (max-width: 880px) {
+  body:before, body:after {
+    content: "";
+    display: table; }
+  body:after {
+    clear: both; }
+  @media (max-width: 537px) {
     body {
       font-size: 16px; } }
 
@@ -14,7 +27,7 @@ a, a:hover, a:visited {
 
 h2 {
   font: 300 1.33em 'crimson_textroman', serif; }
-  @media (max-width: 880px) {
+  @media (max-width: 537px) {
     h2 {
       font-size: 1.1em; } }
 
@@ -26,58 +39,90 @@ strong {
   font-family: 'open_sansregular', sans-serif; }
 
 header {
-  padding: 0;
-  margin: 0;
+  padding: 0 1000px;
+  margin: 0 -1000px;
   position: relative;
-  background: #b29424 url(../img/omrs13-header.png) right bottom/auto 100% no-repeat;
   height: 4.42em;
-  width: 100%; }
-  @media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 2dppx) {
-    header {
-      background-image: url(../img/omrs13-header-crop@2x.png); } }
-  @media (max-width: 880px) {
-    header {
-      background-image: url(../img/omrs13-header-crop.png); } }
-    @media (max-width: 880px) and (-webkit-min-device-pixel-ratio: 2), (max-width: 880px) and (min-resolution: 2dppx) {
-      header {
-        background-image: url(../img/omrs13-header@2x.png); } }
+  background-color: #d6c473;
+  background-image: -webkit-gradient(radial, center center, 0, center center, 460, color-stop(0%, #d6c473), color-stop(20.5%, #a98d26), color-stop(100%, #b29424));
+  background-image: -webkit-radial-gradient(60.25% 86.84%, circle, #d6c473 0%, #a98d26 20.5%, #b29424);
+  background-image: radial-gradient(  circle at 60.25% 86.84%, #d6c473 0%, #a98d26 20.5%, #b29424); }
+  header:before, header:after {
+    content: "";
+    display: table; }
+  header:after {
+    clear: both; }
   @media (max-width: 537px) {
     header {
-      height: 10%; } }
+      height: 2.92em;
+      padding: 0;
+      margin: 0;
+      background-color: #d6c473;
+      background-image: -webkit-gradient(radial, center center, 0, center center, 460, color-stop(0%, #d6c473), color-stop(52.5%, #a98d26), color-stop(100%, #b29424));
+      background-image: -webkit-radial-gradient(87.75% 80.84%, circle, #d6c473 0%, #a98d26 52.5%, #b29424);
+      background-image: radial-gradient(  circle at 87.75% 80.84%, #d6c473 0%, #a98d26 52.5%, #b29424); } }
   header h1 {
-    margin: 0 auto;
+    display: block;
+    float: left;
+    margin-right: 2.35765%;
+    width: 82.94039%;
+    margin: 0;
     padding: 0;
     text-indent: -9999px;
-    position: relative;
     height: 100%;
     max-width: 24.375em;
     background: url(../img/OMRS13.svg) no-repeat;
     background-position: 0 50%;
-    background-size: auto 95%; }
+    background-size: contain; }
+    header h1:last-child {
+      margin-right: 0; }
+  header #tree {
+    display: block;
+    float: left;
+    margin-right: 2.35765%;
+    width: 14.70196%;
+    height: 100%;
+    background: url(../img/omrs13-suntree.png) right bottom/100% auto no-repeat; }
+    header #tree:last-child {
+      margin-right: 0; }
+    @media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 2dppx) {
+      header #tree {
+        background-image: url(../img/omrs13-suntree@2x.png); } }
 
 #wrap {
   position: relative;
-  margin: 2em auto;
-  max-width: 48.8em; }
+  margin: 2em auto; }
   #wrap:before, #wrap:after {
     content: "";
     display: table; }
   #wrap:after {
     clear: both; }
-  @media (max-width: 880px) {
+  @media (max-width: 537px) {
     #wrap {
-      max-width: 24.4em; } }
-  @media (max-width: 880px) {
-    #wrap {
-      margin: 0 auto; } }
+      display: block;
+      float: left;
+      margin-right: 2.35765%;
+      width: 100%;
+      margin: 0 auto; }
+      #wrap:last-child {
+        margin-right: 0; } }
 
 section {
   padding: 1.8em 2.2em;
-  max-width: 20em;
-  float: left; }
-  @media (max-width: 880px) {
+  display: block;
+  float: left;
+  margin-right: 2.35765%;
+  width: 48.82117%; }
+  section:last-child {
+    margin-right: 0; }
+  @media (max-width: 537px) {
     section {
-      float: none; } }
+      display: block;
+      float: left;
+      margin-right: 2.35765%;
+      width: 100%; }
+      section:last-child {
+        margin-right: 0; } }
   section:before, section:after {
     content: "";
     display: table; }
@@ -86,7 +131,7 @@ section {
   section#preface {
     background: #210000;
     padding-top: 0em; }
-    @media (max-width: 880px) {
+    @media (max-width: 537px) {
       section#preface {
         padding-top: 1.8em; } }
   section#entry {

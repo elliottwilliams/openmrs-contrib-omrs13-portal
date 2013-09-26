@@ -11,11 +11,13 @@
         
         <link rel="stylesheet" href="css/style.css">
         <link rel="stylesheet" href="font/stylesheet.css">
-        <script src="js/zepto.min.js" async="true"></script>
+        <link rel="stylesheet" href="css/animate.min.css">
+        <script src="js/zepto.min.js"></script>
     </head>
     <body>
         <header>
             <h1>OpenMRS Wireless Internet Registration</h1>
+            <div id="tree"></div>
         </header>
         
         <div id="wrap">
@@ -54,8 +56,13 @@
         </div>
         
         <script type="text/javascript">
-            $('#entry form').on('submit', function(e) {
-                $('#status').addClass('loading');
+            $().ready(function() {
+                $('#entry form').on('submit', function(e) {
+                    $('#status').addClass('loading');
+                })
+                $('body').on('scroll', function(e) {
+                    this.scrollLeft = 0;
+                })
             })
         </script>
     </body>
